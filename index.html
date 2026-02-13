@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle"></title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+        <span id="selectLanguageLabel"></span>
+        </div>
+        <select id="language-selection">          
+        </select>
+        <div class="timer-box">
+            <div class="input-group">
+                <label id="hoursTextLabel"></label>
+                <input id="hoursInput" type="number" min="0" max="24" value="0">
+            </div>
+            
+            <div class="separator">:</div>
+            
+            <div class="input-group">
+                <label id="minutesTextLabel"></label>
+                <input id="minutesInput" type="number" min="0" max="60" value="0">
+            </div>
+            
+            <div class="separator">:</div>
+            
+            <div class="input-group">
+                <label id ="secondsTextLabel"></label>
+                <input id="secondsInput" type="number" min="0" max="60" value="0">
+            </div>
+        </div>
+
+        <button type="button" id="startTimerButton"> 
+            <span class="button-text"></span>
+        </button>
+        
+    </div>
+    <script src="./javascript.js"></script>
+    <script src="./i18n.js"></script>
+
+</body>
+
+</html>
