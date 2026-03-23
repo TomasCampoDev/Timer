@@ -23,9 +23,9 @@ let textForStopTimer;
 
 document.addEventListener("DOMContentLoaded", ApplyCurrentLanguage);
 document.addEventListener("DOMContentLoaded", PopulateLanguageDropdown);
-secondsInput.addEventListener("input", checkIfInputValueIsInvalid(secondsInput, 60));
-minutesInput.addEventListener("input", checkIfInputValueIsInvalid(minutesInput, 60));
-hoursInput.addEventListener("input", checkIfInputValueIsInvalid(hoursInput, 24));
+secondsInput.addEventListener("input", () => checkIfInputValueIsInvalid(secondsInput, 60));
+minutesInput.addEventListener("input", () => checkIfInputValueIsInvalid(minutesInput, 60));
+hoursInput.addEventListener("input", () => checkIfInputValueIsInvalid(hoursInput, 24));
 startTimerButton.addEventListener("click", StartTimer)
 setInterval(StartTimePassing, 1000);
 
@@ -96,6 +96,7 @@ function checkIfInputValueIsInvalid(timeInputUnit, maxValue)
     let currentInput = timeInputUnit.value;
     let firstCheck = EliminateZeroesOnLeft(currentInput);
     let secondCheck = NotExceedMaxValue(firstCheck, maxValue);
+    console.log(secondCheck);
     timeInputUnit.value = secondCheck;
 
 }
